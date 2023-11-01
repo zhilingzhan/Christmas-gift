@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣诞节抽奖页面</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('gift.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 80%;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FF5733;
+            color: white;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #FF8F66;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="showResultBtn">点击抽奖</button>
+        <div id="result" style="display:none;">
+            <h1>恭喜你！</h1>
+            <p>获得圣诞礼物，将于圣诞节送出</p>
+        </div>
+    </div>
+    <script>
+        const showResultBtn = document.getElementById('showResultBtn');
+        const result = document.getElementById('result');
+
+        showResultBtn.addEventListener('click', () => {
+            result.style.display = 'block';
+            showResultBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
