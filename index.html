@@ -21,6 +21,13 @@
             overflow: hidden;
         }
 
+        /* 对于大屏幕或PC端 */
+        @media only screen and (min-width: 769px) {
+            body {
+                background-repeat: repeat-x; /* 横向重复 */
+            }
+        }
+
         .container {
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.6);
@@ -68,8 +75,8 @@
     <div class="container">
         <button id="showResultBtn">点击抽奖</button>
         <div id="result" style="display:none;">
-            <h1>恭喜你！</h1>
-            <p>获得圣诞礼物，圣诞老人将会在圣诞节送出</p>
+            <h1>恭喜你获得圣诞礼物！</h1>
+            <p>圣诞老人将会在圣诞节送给你</p>
         </div>
     </div>
     <script>
@@ -83,6 +90,3 @@
     </script>
 </body>
 </html>
-
-
-    
